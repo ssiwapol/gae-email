@@ -1,0 +1,18 @@
+runtime: python27
+service: email
+threadsafe: false
+
+# [START bounce_service]
+# [START mail_service]
+inbound_services:
+- mail
+# [END mail_service]
+- mail_bounce
+# [END bounce_service]
+
+handlers:
+- url: /api
+  script: api.app
+- url: /
+  static_files: index.html
+  upload: index.html

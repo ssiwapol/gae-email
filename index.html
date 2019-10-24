@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email API</title>
+</head>
+<body>
+<pre>
+<h1>GOOGLE APP ENGINE EMAIL API</h1>
+<hr>
+<h2>Request</h2>
+<h3>Request URL</h3>
+<h3><a href="api">please copy this url</a></h3>
+<h3>Request header</h3>
+apikey: [AUTH_KEY]
+
+<h3>Request body</h3>
+{
+	"from": "[SENDER_NAME]",
+	"to": "[RECEIVER1_NAME] <receiver1@example.com>; [RECEIVER2_NAME] <receiver2@example.com>",
+	"subject": "[SUBJECT]",
+	"body_header": "[BODY_HEADER]",
+	"body_footer": "[BODY_FOOTER]",
+	"img_list": ["/[PROJECT_ID]/[PATH_TO_IMG1]", "/[PROJECT_ID]/[PATH_TO_IMG2]""],
+	"attach_list": ["/[PROJECT_ID]/[PATH_TO_FILE1]", "/[PROJECT_ID]/[PATH_TO_FILE2]"]
+}
+
+<hr>
+<h2>Response</h2>
+<h3>Response status</h3>
+200: "OK"
+400: "Bad Request"
+401: "Unauthorized"
+<hr>
+<h2>Email</h2>
+<h3>Email subject</h3>
+[SUBJECT]
+
+<h3>Email body</h3>
+[BODY_HEADER]
+[image1]
+[image2]
+[BODY_FOOTER]
+
+<h3>Email attach file</h3>
+[file1], [file2], [image1], [image2]
+
+</pre>
+</body>
+</html>
